@@ -164,3 +164,4 @@ if __name__ == '__main__':
     classify('data_structured/test/golden_age/painting_614.png', model, ['golden_age', 'monet'])
     classify('data_structured/test/monet/painting_614.png', model, ['golden_age', 'monet'])
 
+# test
