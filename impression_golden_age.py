@@ -14,6 +14,8 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras import backend as K
+from numpy.random import seed
+seed(11)
 
 img_width, img_height = 224, 224
 
@@ -147,7 +149,7 @@ def train():
         class_mode='categorical')
 
     model = get_model(input_shape=input_shape, train_generator=train_generator,
-                      validation_generator=validation_generator, epochs=5, weights={0: 1, 1: sup_w})
+                      validation_generator=validation_generator, epochs=10, weights={0: 1, 1: sup_w})
 
     model.save('curator.h5')
 
